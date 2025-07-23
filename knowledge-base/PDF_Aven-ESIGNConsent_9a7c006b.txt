@@ -1,0 +1,28 @@
+Source PDF: Aven-ESIGNConsent.pdf
+==================================================
+
+--- Page 1 ---
+E-SIGN Consent to Electronic Signatures and Electronic Delivery of Disclosures and Notices
+Eﬀective Date:January 1, 2022
+AvenFinancial,Inc.anditsaﬃliates,includingAvenFinancialTechnologies,Inc.,AvenCrypto,Inc.,andAvenAuto,Inc.,(collectively“Aven,”we,our,andus)willneedtoprovideyouwithcommunications,disclosures,notices, statements, and other documents in writing.
+ThisE-SIGNConsenttoElectronicSignaturesandElectronicDeliveryofDisclosuresandNotices(Consent)appliestoallnoticesanddisclosuresforservicesprovidedonAvenwebsites,theAvenmobilewebsite,andAvenmobileapplications(apps).YouagreetotheuseofelectronicsignaturesandtoallowAventoelectronicallydeliverimportantnoticesanddisclosuresthatapplytoourservices,includingourcreditcards.PleasereadthisConsentcarefully. You can download this Consent and save or print a copy for your ﬁles.
+Electronic SignaturesByconsentingtouseelectronicsignatures,youagreethatanyelectronicsignaturesthatyouprovidethroughourwebsite,mobilewebsite,andmobileapplication,includingthecreditcardapplicationprocessandloandocuments,arevalidandenforceableasyourlegalsignatureandacknowledgethattheseelectronicsignatureswilllegallybindyoutothetermsandconditionscontainedinthedisclosuresandagreementsandtermsandconditions we provide you just as if you had physically signed the same documents.
+Types of Information Provided ElectronicallyExamples of some of the notices or disclosures we may deliver electronically:
+●CreditAccountdocuments(AccountOpeningDisclosures,AccountAgreements,andDeedofTrust,ifapplicable)
+●Notice of Right to Cancel
+●Consumer Privacy Notice
+●Credit Score Disclosure
+●Disclosuresornoticesrequiredunderapplicablelawsandregulations,whichmayincludeannualnoticesrequiredundertheElectronicFundTransferActandnoticesregardingchangesinthetermsandconditions of your account
+Access to Notices and Disclosures Delivered ElectronicallyTheformatoftheelectronicdocumentsmayvarybasedonthedeviceyouusetoaccessyouraccounts(Device).Youwillneedavalidemailaddress,phonenumber,connectiontotheinternet,andthefollowinghardwareandsoftware to view the notices and disclosures we deliver to you electronically:
+●Browser-acurrentversionofthebrowserssupportedbyourwebsite,whichincludeMicrosoftInternetExplorer or Edge, Google Chrome, Mozilla Firefox, and Apple Safari.
+●PDFreader-acurrentversionofaprogramthatreadsanddisplaysPDFﬁles(suchasAdobeAcrobatReader).
+●OperatingSystem–anoperatingsystemthatsupportsacurrentversionofoneofthebrowserslistedaboveandacurrentversionofaprogramthatreadsanddisplaysPDFﬁles,includingthemostcurrentversionofMicrosoftWindowsandAppleOSforpersonalcomputersandiOS,Android,orWindowsPhone for mobile devices.
+●Device–aDevicethatcanconnecttotheinternetandhassuﬃcientstoragecapacitytodownloadandsavethenoticesanddisclosureswesendyouortheabilitytoprintnoticesanddisclosuresfromyourDevice.
+How to Obtain Paper CopiesYoumayrequestafreepapercopyofanyofthenoticesanddisclosuresweprovideyouelectronicallybycontactingusatinfo@aven.com.Youmayalsodownloadandprintanynoticesordisclosureswesendyou.Wemayatouroptiondeliverinformationtoyouonpaperandmayalsorequirethatcertaincommunicationsfromyou be delivered to us on paper at a speciﬁed address.
+E-SIGN Consent v .1.4
+1
+--- Page 2 ---
+Withdrawal of ConsentPriortocompletionoftheaccountapplication,youmaywithdrawyourconsenttoreceivingnoticesanddisclosuresinelectronicformbyexitingtheapplication.Ifyoudonotconsenttoreceiveaccountnoticesanddisclosureselectronically,wecannotacceptandprocessyourrequestforanaccount.Ifyouwishtowithdrawyourconsentafteryouhavecompletedyourapplicationandyouraccountisopened,youmaycontactusatsuppport@aven.com.ThereisnofeetoprocessyourwithdrawalofthisConsent.AnywithdrawalofthisConsentwillbeeﬀectiveonlyafterwehaveareasonabletimeperiodtoprocessyourwithdrawal.Someservicesmaynotbe available after you withdraw consent.
+CONSENTBy clicking, signing or checking that you agreed to our E-SIGN Consent, you: (1) acknowledge that you have readand understand this Consent to Electronic Signatures and Electronic Delivery of Disclosures and Notices; (2)acknowledge that you have the ability to access notices and disclosures delivered electronically; (3) consent to theuse of electronic signatures; and (4) consent to electronic delivery of notices and disclosures described in thisConsent.
+E-SIGN Consent v .1.4
+2
