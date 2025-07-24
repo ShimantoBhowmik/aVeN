@@ -1,13 +1,12 @@
 import os
 import torch
 import dotenv
-import re
 from pinecone import Pinecone, ServerlessSpec
 from langchain_pinecone import PineconeVectorStore
 from sentence_transformers import SentenceTransformer
 from langchain_huggingface import HuggingFaceEmbeddings
 import google.generativeai as genai
-from prompts.prompt_manager import PromptTemplateManager
+from prompt_manager import PromptTemplateManager
 
 dotenv.load_dotenv()
 
@@ -29,10 +28,10 @@ class PineconeClient:
             model_name="sentence-transformers/all-MiniLM-L12-v2"
         )
         genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
-        self.llm_model = genai.GenerativeModel("gemini-1.5-flash")
+        self.llm_model = genai.GenerativeModel("gemini-2.5-flash")
 
         # Initialize prompt template manager
-        self.prompt_manager = PromptTemplateManager()
+        self.prompt_manager = PromptTemplateManager("../")
 
     def create_pinecone_index(self, index_name):
         if index_name not in self.pinecone_client.list_indexes().names():

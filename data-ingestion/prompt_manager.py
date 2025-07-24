@@ -76,31 +76,3 @@ class PromptTemplateManager:
     def list_templates(self) -> List[str]:
         """List all available templates"""
         return list(self.templates.keys())
-
-
-# Example usage and testing
-if __name__ == "__main__":
-    # Test the prompt manager
-    manager = PromptTemplateManager()
-    
-    # Test data
-    test_context = "Aven is a credit card that lets homeowners use their home equity to get low rates."
-    test_question = "What is Aven?"
-    test_sources = [
-        {
-            "title": "About Aven",
-            "source_reference": "https://www.aven.com/about",
-            "source_type": "web",
-            "filename": "About-Aven-Card.txt"
-        }
-    ]
-    
-    try:
-        formatted_prompt = manager.format_aven_ai_prompt(test_context, test_question, test_sources)
-        print("Template loaded and formatted successfully!")
-        print("\\n" + "="*50)
-        print("FORMATTED PROMPT:")
-        print("="*50)
-        print(formatted_prompt)
-    except Exception as e:
-        print(f"Error: {e}")
