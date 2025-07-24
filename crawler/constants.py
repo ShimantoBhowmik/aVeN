@@ -19,7 +19,7 @@ AVEN_URLS = [
     "https://www.aven.com/disclosures",
     "https://www.aven.com/press/series-d",
     "https://www.aven.com/docs/PrivacyPolicy.html",
-    "https://www.coastalbank.com/privacy-center/"
+    "https://www.coastalbank.com/privacy-center/",
 ]
 
 # Configuration settings
@@ -35,34 +35,44 @@ USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36
 
 # Content selectors for finding main content
 MAIN_CONTENT_SELECTORS = [
-    'main', 
-    'article', 
-    '[role="main"]', 
-    '.content', 
-    '.main-content', 
-    '#content', 
-    '#main', 
-    '.post-content', 
-    '.entry-content',
-    '.article-body', 
-    '.page-content'
+    "main",
+    "article",
+    '[role="main"]',
+    ".content",
+    ".main-content",
+    "#content",
+    "#main",
+    ".post-content",
+    ".entry-content",
+    ".article-body",
+    ".page-content",
 ]
 
 # Elements to remove from pages
 ELEMENTS_TO_REMOVE = [
-    'script', 
-    'style', 
-    'nav', 
-    'footer', 
-    'header', 
-    '.nav', 
-    '.navigation', 
-    '.menu', 
-    '.sidebar',
-    '.cookie-banner', 
-    '.popup', 
-    '.modal'
+    "script",
+    "style",
+    "nav",
+    "footer",
+    "header",
+    ".nav",
+    ".navigation",
+    ".menu",
+    ".sidebar",
+    ".cookie-banner",
+    ".popup",
+    ".modal",
 ]
+
+# PDF filename to URL mapping
+PDF_URL_MAPPING = {
+    "Aven-CFPBCharmBooklet.pdf": "https://www.aven.com/docs/CFPBCharmBooklet.pdf",
+    "Aven-ESIGNConsent.pdf": "https://www.aven.com/docs/ESIGNConsent.pdf",
+    "Aven-CFPBHELOCBooklet.pdf": "https://www.aven.com/docs/CFPBHELOCBooklet.pdf",
+    "Aven-PifTerms.pdf": "https://www.aven.com/public/docs/PifTerms",
+    "Aven-ConsumerPrivacyPolicyNotice.pdf": "https://www.aven.com/docs/ConsumerPrivacyPolicyNotice.pdf",
+    "Aven-TermsOfService.pdf": "https://www.aven.com/public/docs/TermsOfService",
+}
 
 # Minimum content length to consider valid
 MIN_CONTENT_LENGTH = 10
