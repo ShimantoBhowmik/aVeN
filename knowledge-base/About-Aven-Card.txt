@@ -1,45 +1,19 @@
-URL: https://www.aven.com/careers
-Title: Careers | Aven Card
+URL: https://www.aven.com/about
+Title: About | Aven Card
 ==================================================
 
-WORK AT AVEN
-Build the machine for
-consumer finance.
-Explore Opportunities
+ABOUT US
+Building the machine for consumer finance.
+Our mission is to be the lowest cost, most convenient, and most transparent access to capital by developing cutting-edge technology. We've saved our customers millions — and we're just getting started.
 $1.5B+
 FUNDED TO CUSTOMERS
 $100M+
 CUMULATIVE INTEREST SAVED1
 $280M+
 EQUITY RAISED
-Who we're looking for?
-World Class Technologists
-You should be the best in your field and want to work with the best in your field. We are a technology company – mathematicians, engineers, and data-scientists.
-Builders
-You should believe in the power of building machines to solve social problems—and be best at it. We are building a machine, and that should excite you.
-Creative Logicians
-You should think differently to create products that become social infrastructure. We leverage cutting-edge engineering combined with creativity—from robotic arms signing to machine learning—to build 10x solutions.
-Polymaths
-You should master your domain in excruciating detail first. We strive to learn everything - then invent. You should aim to master every aspect of our systems, from legal frameworks to APIs.
-Explore Opportunities
-The principles for how we build.
-Customer First
-We always start & end with the user in mind. For everything. Always.
-Sustainable
-Our products must be financially sustainable for long-term usage by our customers, by our partners, and for ourselves.
-Minimalists
-We are spartan in our products, in our copy, in our code, in our process, in our designs, and in our spending. We spend hours to remove a single charecter. Nothing extra.
-Fast
-We move quickly and decisively. Speed leads to quality, so we invest in it. We aim to make every day faster than the last.
-Rational
-Strive to be rational. Minimize emotion during decision-making. Think before acting.
-Fundamentalist
-Know completely & deeply from first principles. Accurately assess confidence. Don’t conflate knowledge with faith, and don’t conflate patterns with reasons.
-Detailed
-We understand & dive into the details — the little things matter. Dive deep and understand things at the primitive, atomic level, and only then derive + learn abstractions.
 Loved by thousands
 4.9/5
-Read 5,074 Reviews
+Read 5,087 Reviews
 “Everybody markets in such a way that it’s going to be the best thing since sliced bread. But actually it was amazing.”
 Raitis
 Entrepreneur
