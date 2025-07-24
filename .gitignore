@@ -208,12 +208,6 @@ $RECYCLE.BIN/
 # .nfs files are created when an open file is removed but is still being accessed
 .nfs*
 
-# Project-specific ignores
-# Logs directory - but keep structure, ignore contents
-logs/*.log
-logs/*.txt
-logs/
-
 # Output directories
 output/
 data/
