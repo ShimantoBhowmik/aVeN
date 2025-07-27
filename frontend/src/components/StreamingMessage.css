@@ -1,0 +1,42 @@
+.streaming .message-text {
+  position: relative;
+}
+
+.streaming-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: #4f46e5;
+  animation: blink 1s infinite;
+  margin-left: 2px;
+  vertical-align: baseline;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+.streaming .message-bubble {
+  border: 1px solid #e5e5e7;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Add a subtle pulsing effect while streaming */
+.streaming:not(.complete) .message-bubble {
+  animation: subtle-pulse 2s ease-in-out infinite;
+}
+
+@keyframes subtle-pulse {
+  0%, 100% {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  50% {
+    box-shadow: 0 2px 6px rgba(79, 70, 229, 0.15);
+  }
+}

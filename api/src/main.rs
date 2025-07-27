@@ -4,16 +4,21 @@ mod gemini_client;
 mod prompt_manager;
 mod query_service;
 mod constants;
+mod guardrails;
+mod metrics;
 
 use axum::{
     extract::State,
     http::StatusCode,
-    response::Json,
-    routing::post,
+    response::{Json, Sse, sse::Event},
+    routing::{get, post},
     Router,
 };
+use futures::stream::{self, Stream};
 use serde_json::json;
 use std::sync::Arc;
+use std::time::Duration;
+use tokio_stream::StreamExt as _;
 use tower::ServiceBuilder;
 use tower_http::cors::CorsLayer;
 use tracing::{error, info};
@@ -49,7 +54,9 @@ async fn main() {
     // Build the application with routes
     let app = Router::new()
         .route("/query", post(query_handler))
-        .route("/health", axum::routing::get(health_check))
+        .route("/query/stream", post(query_stream_handler))
+        .route("/health", get(health_check))
+        .route("/metrics", get(metrics_handler))
         .layer(
             ServiceBuilder::new()
                 .layer(CorsLayer::permissive())
@@ -92,9 +99,78 @@ async fn query_handler(
     }
 }
 
+async fn query_stream_handler(
+    State(query_service): State<AppState>,
+    Json(request): Json<QueryRequest>,
+) -> Sse<impl Stream<Item = Result<Event, std::convert::Infallible>>> {
+    info!("Received streaming query request: {}", request.question);
+    
+    let stream = async_stream::stream! {
+        // Send initial event to indicate processing started
+        yield Ok(Event::default()
+            .event("start")
+            .data(json!({"status": "processing"}).to_string()));
+
+        match query_service.query_pinecone(request).await {
+            Ok(response) => {
+                // Stream the response in chunks
+                let answer = response.answer;
+                let words: Vec<&str> = answer.split_whitespace().collect();
+                let chunk_size = 3; // Send 3 words at a time
+                
+                for chunk in words.chunks(chunk_size) {
+                    let chunk_text = chunk.join(" ");
+                    yield Ok(Event::default()
+                        .event("chunk")
+                        .data(json!({"chunk": chunk_text}).to_string()));
+                    
+                    // Small delay to simulate realistic streaming
+                    tokio::time::sleep(Duration::from_millis(50)).await;
+                }
+                
+                // Send final event with complete response and sources
+                yield Ok(Event::default()
+                    .event("complete")
+                    .data(json!({
+                        "answer": answer,
+                        "sources": response.sources,
+                        "context": response.context,
+                        "guardrail_triggered": response.guardrail_triggered
+                    }).to_string()));
+            }
+            Err(e) => {
+                error!("Failed to process streaming query: {}", e);
+                yield Ok(Event::default()
+                    .event("error")
+                    .data(json!({
+                        "error": "Failed to process query",
+                        "message": e.to_string()
+                    }).to_string()));
+            }
+        }
+        
+        // Send end event
+        yield Ok(Event::default()
+            .event("end")
+            .data("{}"));
+    };
+
+    Sse::new(stream)
+}
+
 async fn health_check() -> Json<serde_json::Value> {
     Json(json!({
         "status": "healthy",
         "service": "aven-api"
+    }))
+}
+
+async fn metrics_handler(
+    State(query_service): State<AppState>,
+) -> Json<serde_json::Value> {
+    let metrics = query_service.get_metrics();
+    Json(json!({
+        "metrics": metrics,
+        "summary": query_service.get_metrics_summary()
     }))
 }

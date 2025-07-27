@@ -1,0 +1,133 @@
+/* Message component styles - extracted from App.css for better organization */
+
+.message {
+  display: flex;
+  gap: 1rem;
+  max-width: 85%;
+  align-items: flex-start;
+}
+
+.user-message {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.bot-message {
+  align-self: flex-start;
+}
+
+.message-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.bot-message .message-avatar {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.user-message .message-avatar {
+  background-color: #6b7280;
+  color: white;
+}
+
+.message-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.message-bubble {
+  padding: 1rem 1.25rem;
+  border-radius: 18px;
+  position: relative;
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+
+.bot-message .message-bubble {
+  background-color: white;
+  border: 1px solid #e5e5e7;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.user-message .message-bubble {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.message-bubble.error {
+  background-color: #fef2f2;
+  border-color: #fecaca;
+  color: #dc2626;
+}
+
+.message-text {
+  margin: 0;
+}
+
+.message-text p {
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.message-text p:last-child {
+  margin-bottom: 0;
+}
+
+.message-text h1, .message-text h2, .message-text h3 {
+  margin: 1rem 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.message-text ul, .message-text ol {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.message-text li {
+  margin-bottom: 0.25rem;
+}
+
+.message-text code {
+  background-color: #f3f4f6;
+  padding: 0.125rem 0.25rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.875rem;
+}
+
+.user-message .message-text code {
+  background-color: rgba(255,255,255,0.2);
+}
+
+.message-timestamp {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+.user-message .message-timestamp {
+  text-align: right;
+}
+
+.guardrail-notice {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #fef3c7;
+  color: #92400e;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid #fde68a;
+}
