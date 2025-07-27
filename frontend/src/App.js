@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Send, Bot, CheckCircle } from 'lucide-react';
 import Message from './components/Message';
 import TypingIndicator from './components/TypingIndicator';
+import VoiceToText from './components/VoiceToText';
 import { apiService, utils } from './utils/api';
 import './App.css';
 
@@ -18,6 +19,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [isConnected, setIsConnected] = useState(null);
   const [connectionError, setConnectionError] = useState('');
+  const [isVoiceActive, setIsVoiceActive] = useState(false);
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
 
@@ -122,6 +124,23 @@ function App() {
     }
   };
 
+  // Handle voice input
+  const handleVoiceTranscript = (transcript, isFinal) => {
+    if (isFinal) {
+      // Final transcript - send as message
+      setInputMessage(transcript);
+      setIsVoiceActive(false);
+      // Auto-send the message after a short delay to allow user to see the transcript
+      setTimeout(() => {
+        sendMessage(transcript);
+      }, 500);
+    } else {
+      // Interim transcript - update input field
+      setInputMessage(transcript);
+      setIsVoiceActive(true);
+    }
+  };
+
   return (
     <div className="app">
       <header className="app-header">
@@ -157,17 +176,24 @@ function App() {
             onChange={(e) => setInputMessage(e.target.value)}
             onKeyPress={handleKeyPress}
             placeholder="Ask me anything about Aven's services..."
-            className="message-input"
+            className={`message-input ${isVoiceActive ? 'voice-active' : ''}`}
             rows="1"
             disabled={isLoading || !isConnected}
           />
-          <button
-            onClick={() => sendMessage(inputMessage)}
-            disabled={!inputMessage.trim() || isLoading || !isConnected}
-            className="send-button"
-          >
-            <Send size={20} />
-          </button>
+          <div className="input-actions">
+            <VoiceToText
+              onTranscript={handleVoiceTranscript}
+              isDisabled={isLoading || !isConnected}
+              className="voice-input"
+            />
+            <button
+              onClick={() => sendMessage(inputMessage)}
+              disabled={!inputMessage.trim() || isLoading || !isConnected}
+              className="send-button"
+            >
+              <Send size={20} />
+            </button>
+          </div>
         </div>
         <div className="input-footer">
           <span>Aven AI can make mistakes. Please verify important information.</span>
